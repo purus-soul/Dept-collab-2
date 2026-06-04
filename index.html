@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabHub | Student Project Network</title>
+
+    <meta name="description"
+        content="Connect with students, recruit teammates, discover projects, and build your portfolio with CollabHub.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>🚀</span>
+            <h2>CollabHub</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#projects">Projects</a>
+            <a href="#community">Community</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="themeToggle" class="icon-btn">
+                🌙
+            </button>
+
+            <button id="btn-show-login" class="secondary-btn">
+                Login
+            </button>
+
+            <button id="btn-show-register" class="primary-btn">
+                Get Started
+            </button>
+
+            <button id="btn-logout" class="danger-btn hidden">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                Student Collaboration Platform
+            </span>
+
+            <h1>
+                Find Teammates.<br>
+                Build Amazing Projects.
+            </h1>
+
+            <p>
+                Connect students from different departments,
+                recruit skilled teammates,
+                discover exciting projects,
+                and build your professional portfolio.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button id="heroRegisterBtn" class="primary-btn">
+                    Join CollabHub
+                </button>
+
+                <button class="secondary-btn">
+                    Explore Projects
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h3>500+</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div>
+                    <h3>1200+</h3>
+                    <p>Students</p>
+                </div>
+
+                <div>
+                    <h3>8+</h3>
+                    <p>Departments</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="hero-card floating-card">
+
+                <h4>AI Attendance System</h4>
+
+                <p>Looking for:</p>
+
+                <div class="skills">
+                    <span>Python</span>
+                    <span>OpenCV</span>
+                    <span>Firebase</span>
+                </div>
+
+                <button>Apply</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features" class="features-section">
+
+        <div class="section-header">
+            <span>FEATURES</span>
+            <h2>Everything Needed For Collaboration</h2>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Find Team Members</h3>
+                <p>
+                    Discover students with the exact skills
+                    needed for your project.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Create Projects</h3>
+                <p>
+                    Publish project opportunities and recruit
+                    collaborators instantly.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Showcase Skills</h3>
+                <p>
+                    Build a professional profile and highlight
+                    your expertise.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Grow Portfolio</h3>
+                <p>
+                    Work on real projects and gain practical
+                    experience.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= AUTH SECTION ================= -->
+
+    <section id="auth-forms" class="auth-section">
+
+        <!-- LOGIN -->
+
+        <div id="login-form" class="auth-card hidden">
+
+            <h2>Welcome Back</h2>
+
+            <input id="login-email"
+                type="email"
+                placeholder="Email Address">
+
+            <input id="login-pass"
+                type="password"
+                placeholder="Password">
+
+            <button id="btn-login" class="primary-btn">
+                Login
+            </button>
+
+        </div>
+
+        <!-- REGISTER -->
+
+        <div id="register-form" class="auth-card hidden">
+
+            <h2>Create Account</h2>
+
+            <input id="reg-name"
+                placeholder="Full Name">
+
+            <input id="reg-email"
+                type="email"
+                placeholder="Email">
+
+            <input id="reg-dept"
+                placeholder="Department">
+
+            <input id="reg-skills"
+                placeholder="Skills (Comma Separated)">
+
+            <div class="password-group">
+
+                <input id="reg-pass"
+                    type="password"
+                    placeholder="Password">
+
+                <span id="toggle-pass">
+                    👁️
+                </span>
+
+            </div>
+
+            <button id="btn-register"
+                class="primary-btn">
+                Create Account
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CREATE PROJECT ================= -->
+
+    <section id="create-panel"
+        class="create-project hidden">
+
+        <div class="section-header">
+            <span>PROJECT CREATION</span>
+            <h2>Publish New Project</h2>
+        </div>
+
+        <input id="post-title"
+            placeholder="Project Title">
+
+        <textarea id="post-desc"
+            placeholder="Describe your project"></textarea>
+
+        <input id="post-skills"
+            placeholder="Skills Needed">
+
+        <button id="btn-create"
+            class="primary-btn">
+            Publish Project
+        </button>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects"
+        class="projects-section">
+
+        <div class="section-header">
+            <span>PROJECT MARKETPLACE</span>
+            <h2>Available Projects</h2>
+        </div>
+
+        <div id="dept-filter"
+            class="filter-container"></div>
+
+        <div id="posts-list"
+            class="projects-grid">
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+
+    <section class="profile-section">
+
+        <div class="section-header">
+            <span>PROFILE</span>
+            <h2>Your Dashboard</h2>
+        </div>
+
+        <div id="profile-info"
+            class="profile-card"></div>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-panel">
+
+                <h3>Your Projects</h3>
+
+                <div id="profile-posts"></div>
+
+            </div>
+
+            <div class="dashboard-panel">
+
+                <h3>Joined Projects</h3>
+
+                <div id="profile-joined"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MODAL ================= -->
+
+    <div id="detail-modal"
+        class="hidden">
+
+        <div id="detail-content">
+
+            <button id="detail-close">
+                ✕
+            </button>
+
+            <div id="detail-body"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <h2>CollabHub</h2>
+
+            <p>
+                Empowering students through collaboration.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#">Projects</a>
+                <a href="#">Community</a>
+                <a href="#">Privacy</a>
+                <a href="#">Support</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+  </html>
