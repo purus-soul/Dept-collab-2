@@ -1,0 +1,1 @@
+// USE YOUR EXISTING script.js FROM THE REPOSITORY. Replace only index.html and style.css with the upgraded versions above. Your current script.js already contains the Firebase functionality.
